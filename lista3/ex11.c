@@ -2,16 +2,15 @@
 #include <locale.h>
 int main(){
     setlocale(LC_ALL,"Portuguese");
- int i = 1;
- int n;
+ 
+ int m;
 
     printf("Digite um número:\n");
-    scanf("%d",&n);
+    scanf("%d",&m);
+    
 
-while(i<=n){
-   if (i%2 != 0){
-    printf("%d\n",i);
-}else{n++;}
-
-i++;}
+  while(m>=1){
+printf("%d",m);
+m--;}
+return 0;
 }
