@@ -2,25 +2,18 @@
 #include <stdlib.h>
 #include <locale.h>
 int main(){
-    setlocale(LC_ALL,"Portuguese");
+setlocale(LC_ALL,"Portuguese");
 int n1 = 0;
 int n2 = 1;
 int num;
 
-printf("Digite o número de limitação para a sequência de Fibonacci:\n");
+printf("Digite o número de referência para a sequência de Fibonacci:\n");
 scanf("%d",&num);
 
-while(n2>0){
-printf("%d ",n1);
-if(n1>num){
-break;
-}
-printf("%d ",n2);
-if(n2>num){
-break;
-}
+do{
+printf("%d \n %d \n",n1,n2);
 n1 = n1+n2;
-n2 = n1+n2;
-}
+n2 = n2+n1;
+}while(n1<num&&n2<num);
 return 0;
 }

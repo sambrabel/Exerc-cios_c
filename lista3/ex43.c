@@ -2,19 +2,19 @@
 #include <stdlib.h>
 #include <locale.h>
 int main(){
-int idade,i;
-float media = 0;
+int idade;
+float soma = 0.0;
+int n = 0;
 
-for(i=1;i>0;i++){
-printf("Digite a idade:\n");
+printf("Digite a idade do indivíduo (Digite 0 para para)\n");
 scanf("%d",&idade);
-if(idade<0){
-printf("Idade inválida");
-exit(1);
-} else if(idade==0){
-break;
+
+while(idade>0){
+soma+=idade;
+n++;
+printf("Digite a idade do indivíduo (Digite 0 para para)\n");
+scanf("%d",&idade);
 }
-media += idade;}
-printf("A média das idades é de %.2f anos.",media/i);
+printf("A média das idades é: %.2f anos.",soma/n);
 return 0;
 }
