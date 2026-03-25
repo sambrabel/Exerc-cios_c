@@ -8,9 +8,9 @@ int n,i;
 int v = 0;
 long long int soma = 17;//somamos 17 para considerar o 2,3,5,7
 
-for(n=3;n<2000000;n+=2){
-if (n%7!=0 && n%3!=0 && n%5!=0){
-    for(i=3;i<=sqrt(n);i++){
+for(n=3;n<2000000;n+=2){//considera cada número a partir de 3 até 2M
+if (n%7!=0 && n%3!=0 && n%5!=0){//pré filtro que configura 
+    for(i=3;i<=sqrt(n);i++){//testar se o número vai ser divisível por i, sendo ir todos os números entre 3 e rais de n
     if(n%i==0){
     v = 1;
     }

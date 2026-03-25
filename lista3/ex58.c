@@ -5,7 +5,7 @@
 int main(){
 setlocale(LC_ALL,"Portuguese");
 int n1,n2,i;
-int contagem = 0;
+int soma = 0;
 int v = 0;
 printf("Digite o primeiro número limitante:\n");
 scanf("%d",&n1);
@@ -21,7 +21,7 @@ if(n1<n2){
         }
     }
     if(!v){
-        contagem ++;
+        soma += n1;
     }
     n1++;
     v=0;
@@ -36,12 +36,12 @@ if(n1>n2){
         }
     }
     if(!v){
-        contagem ++;
+        soma+=n2;
     }
     n2++;
     v=0;
 }}
 
-printf("Existem %d números primos entre %d e %d",contagem,n1,n2);
+printf("A soma dos números primos entre amobos os números é de %d",soma);
 return 0;
 }
